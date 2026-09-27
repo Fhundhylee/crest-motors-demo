@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: #f3f1ed;
+  color: #111;
+  font-family: "DM Sans", sans-serif;
+}
+.demo {
+  background: #b9ff45;
+  color: #111;
+  text-align: center;
+  padding: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  background: #f3f1ed;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.logo {
+  font-family: "Space Grotesk";
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+.logo span {
+  font-weight: 400;
+  margin-left: 7px;
+}
+.links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+}
+.links button,
+.hero button,
+.finder button,
+.carBody button,
+.serviceGrid button,
+.vehicleModal button,
+.formModal button {
+  border: 0;
+  background: #111;
+  color: #fff;
+  padding: 14px 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.menub {
+  display: none;
+  background: none;
+  border: 0;
+}
+.hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  background: #111;
+  color: #fff;
+}
+.heroCopy {
+  padding: 110px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 0 0 15px;
+  color: #777;
+}
+.hero .eyebrow {
+  color: #b9ff45;
+}
+.hero h1 {
+  font: 600 clamp(58px, 7vw, 100px)/0.9 "Space Grotesk";
+  letter-spacing: -6px;
+  margin: 0;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #b9ff45;
+}
+.heroCopy > p:not(.eyebrow) {
+  color: #bbb;
+  max-width: 480px;
+  line-height: 1.7;
+  margin: 28px 0;
+}
+.hero button {
+  width: max-content;
+  background: #b9ff45;
+  color: #111;
+}
+.heroCar {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.15), transparent),
+    url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+.finder {
+  margin: -45px auto 0;
+  position: relative;
+  z-index: 5;
+  width: 88%;
+  padding: 30px 35px;
+  background: #fff;
+  box-shadow: 0 18px 45px #0001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finder small {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #777;
+}
+.finder h2 {
+  margin: 8px 0 0;
+  font: 600 25px "Space Grotesk";
+}
+.controls {
+  display: flex;
+  gap: 10px;
+}
+.controls select,
+.search,
+.controls input {
+  height: 48px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.controls select,
+.search {
+  padding: 0 13px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search input {
+  border: 0;
+  outline: 0;
+}
+.section {
+  padding: 110px 7%;
+}
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
+}
+.section h2,
+.finance h2,
+.about h2 {
+  font: 600 clamp(40px, 5vw, 68px)/0.95 "Space Grotesk";
+  letter-spacing: -3px;
+  margin: 0;
+}
+.sectionHead > p {
+  max-width: 350px;
+  color: #777;
+  line-height: 1.6;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.car {
+  background: #fff;
+}
+.carImg {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+.carImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.car:hover img {
+  transform: scale(1.04);
+}
+.carImg span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #fff;
+  padding: 7px 10px;
+  font-size: 11px;
+}
+.carBody {
+  padding: 23px;
+}
+.carBody small {
+  color: #777;
+}
+.carBody h3 {
+  font: 600 28px "Space Grotesk";
+  margin: 7px 0;
+}
+.carBody p {
+  color: #777;
+  font-size: 13px;
+}
+.carBody strong {
+  font-size: 20px;
+  display: block;
+  margin: 22px 0;
+}
+.carBody button {
+  width: 100%;
+  justify-content: center;
+}
+.dark {
+  background: #111;
+  color: #fff;
+}
+.dark .eyebrow {
+  color: #b9ff45;
+}
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 55px;
+  border-top: 1px solid #333;
+}
+.serviceGrid > div {
+  padding: 45px 30px 20px 0;
+  border-right: 1px solid #333;
+  margin-right: 30px;
+}
+.serviceGrid svg {
+  color: #b9ff45;
+}
+.serviceGrid h3 {
+  font: 600 27px "Space Grotesk";
+}
+.serviceGrid p {
+  color: #999;
+  line-height: 1.7;
+  min-height: 65px;
+}
+.serviceGrid button {
+  background: none;
+  padding-left: 0;
+}
+.finance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  background: #e9e6df;
+}
+.finance > div:first-child p:last-child {
+  color: #666;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-top: 30px;
+}
+.calc {
+  background: #fff;
+  padding: 35px;
+}
+.calc label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 18px;
+}
+.calc input,
+.calc select,
+.formModal input,
+.formModal select,
+.formModal textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 14px;
+  margin-top: 7px;
+  font: inherit;
+  background: #fff;
+}
+.estimate {
+  background: #111;
+  color: #fff;
+  padding: 24px;
+  margin-top: 22px;
+}
+.estimate small {
+  display: block;
+  color: #999;
+}
+.estimate b {
+  display: block;
+  font: 600 36px "Space Grotesk";
+  color: #b9ff45;
+  margin: 8px 0;
+}
+.estimate span {
+  font-size: 11px;
+  color: #777;
+}
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  background: #fff;
+}
+.about > div:last-child > p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+.stats {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+.stats b {
+  font: 600 34px "Space Grotesk";
+}
+.stats small {
+  display: block;
+  font: 12px "DM Sans";
+  color: #777;
+  margin-top: 7px;
+}
+footer {
+  background: #111;
+  color: #aaa;
+  padding: 45px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .logo {
+  color: #fff;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #000b;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.vehicleModal {
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  position: relative;
+}
+.vehicleModal > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vehicleModal > div {
+  padding: 50px;
+}
+.vehicleModal h2,
+.formModal h2 {
+  font: 600 48px "Space Grotesk";
+  letter-spacing: -2px;
+  margin: 8px 0;
+}
+.vehicleModal h3 {
+  font: 28px "Space Grotesk";
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+.formModal {
+  background: #fff;
+  width: 100%;
+  max-width: 530px;
+  padding: 45px;
+  position: relative;
+}
+.formModal textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.formModal button {
+  margin-top: 15px;
+  width: 100%;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 25px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .links.show {
+    display: flex;
+  }
+  .links a {
+    color: #fff;
+  }
+  .links button {
+    justify-content: center;
+  }
+  .menub {
+    display: block;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroCopy {
+    padding: 90px 8%;
+  }
+  .heroCar {
+    height: 430px;
+  }
+  .finder {
+    width: 92%;
+    display: block;
+  }
+  .controls {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .finance,
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+  .serviceGrid > div {
+    border-right: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 35px;
+  }
+  .vehicleModal {
+    grid-template-columns: 1fr;
+  }
+  .vehicleModal > img {
+    height: 250px;
+  }
+  .vehicleModal > div {
+    padding: 30px;
+  }
+  footer {
+    display: block;
+  }
+  .sectionHead {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 57px;
+    letter-spacing: -4px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .finder {
+    margin-top: -25px;
+  }
+  .controls > * {
+    width: 100%;
+  }
+  .search input {
+    width: 100%;
+  }
+  .section {
+    padding: 75px 6%;
+  }
+  .finance h2,
+  .about h2 {
+    font-size: 45px;
+  }
+}
